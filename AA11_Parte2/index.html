@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejemplo Responsivo</title>
+<style>
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: row; /* Para pantallas grandes en fila */
+    gap: 20px;
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.caja {
+    background: lightseagreen;
+    padding: 5%;
+    font-size: 2vw; 
+    flex: 1; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    min-height: 120px;
+}
+
+.caja:nth-child(1) { 
+    background: lightseagreen; 
+}
+
+.caja:nth-child(2) { 
+    background: coral; 
+}
+
+.caja:nth-child(3) { 
+    background: mediumpurple; 
+}
+
+.caja:nth-child(4) { 
+    background: gold; 
+    color: #333; 
+}
+
+/* Versión para pantallas pequeñas */
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column; 
+    }
+    
+    .caja {
+        font-size: 4vw;
+        min-height: 80px;
+    }
+}
+
+/* Versión para pantallas más chicas */
+@media (max-width: 480px) {
+    .contenedor {
+        padding: 10px;
+        gap: 15px;
+    }
+    
+    .caja {
+        font-size: 5vw;
+        padding: 8%;
+    }
+}
+</style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="caja">Este es un diseño responsivo</div>
+        <div class="caja">Segunda caja</div>
+        <div class="caja">Tercera caja</div>
+        <div class="caja">Cuarta caja</div>
+    </div>
+</body>
+</html>
+
